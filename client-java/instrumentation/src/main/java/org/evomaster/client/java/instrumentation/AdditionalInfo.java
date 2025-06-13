@@ -106,7 +106,11 @@ public class AdditionalInfo implements Serializable {
 
     private final Set<MongoFindCommand> mongoFindCommandData = new CopyOnWriteArraySet<>();
 
+    private final Set<RedisCommand> redisCommandData = new CopyOnWriteArraySet<>();
+
     private final Set<MongoCollectionSchema> mongoCollectionSchemaData = new CopyOnWriteArraySet<>();
+
+    private final Set<RedisKeySchema> redisKeySchemaData = new CopyOnWriteArraySet<>();
 
     public Set<ExecutedSqlCommand> getSqlInfoData(){
         return Collections.unmodifiableSet(executedSqlCommandData);
@@ -116,8 +120,16 @@ public class AdditionalInfo implements Serializable {
         return Collections.unmodifiableSet(mongoFindCommandData);
     }
 
+    public Set<RedisCommand> getRedisCommandData(){
+        return Collections.unmodifiableSet(redisCommandData);
+    }
+
     public Set<MongoCollectionSchema> getMongoCollectionTypeData(){
         return Collections.unmodifiableSet(mongoCollectionSchemaData);
+    }
+
+    public Set<RedisKeySchema> getRedisKeyTypeData(){
+        return Collections.unmodifiableSet(redisKeySchemaData);
     }
 
     public void addSqlInfo(ExecutedSqlCommand info){
@@ -128,8 +140,16 @@ public class AdditionalInfo implements Serializable {
         mongoFindCommandData.add(info);
     }
 
+    public void addRedisInfo(RedisCommand info){
+        redisCommandData.add(info);
+    }
+
     public void addMongoCollectionType(MongoCollectionSchema mongoCollectionSchema){
         mongoCollectionSchemaData.add(mongoCollectionSchema);
+    }
+
+    public void addRedisKeyType(RedisKeySchema redisKeySchema){
+        redisKeySchemaData.add(redisKeySchema);
     }
 
     public Set<String> getParsedDtoNamesView(){
