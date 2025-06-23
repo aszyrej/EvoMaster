@@ -429,9 +429,9 @@ public class ExecutionTracer {
             getCurrentAdditionalInfo().addMongoInfo(info);
     }
 
-    public static void addRedisInfo(RedisCommand info){
+    public static void addRedisCommand(RedisCommand info){
         if (!executingInitRedis)
-            getCurrentAdditionalInfo().addRedisInfo(info);
+            getCurrentAdditionalInfo().addRedisCommand(info);
     }
 
     public static void addMongoCollectionType(MongoCollectionSchema mongoCollectionSchema){

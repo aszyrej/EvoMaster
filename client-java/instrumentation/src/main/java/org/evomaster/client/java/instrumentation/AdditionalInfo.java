@@ -140,7 +140,7 @@ public class AdditionalInfo implements Serializable {
         mongoFindCommandData.add(info);
     }
 
-    public void addRedisInfo(RedisCommand info){
+    public void addRedisCommand(RedisCommand info){
         redisCommandData.add(info);
     }
 
