@@ -440,12 +440,6 @@ public class ExecutionTracer {
         }
     }
 
-    public static void addRedisSchemaType(RedisKeySchema redisKeySchema){
-        if (!executingInitRedis) {
-            getCurrentAdditionalInfo().addRedisKeyType(redisKeySchema);
-        }
-    }
-
     public static void markLastExecutedStatement(String lastLine, String lastMethod) {
         getCurrentAdditionalInfo().pushLastExecutedStatement(lastLine, lastMethod);
     }
