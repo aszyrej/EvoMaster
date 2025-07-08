@@ -107,7 +107,7 @@ public class AdditionalInfo implements Serializable {
     private final Set<MongoFindCommand> mongoFindCommandData = new CopyOnWriteArraySet<>();
 
     private final Set<OpenSearchCommand> openSearchCommandData = new CopyOnWriteArraySet<>();
-
+    
     private final Set<RedisCommand> redisCommandData = new CopyOnWriteArraySet<>();
 
     private final Set<MongoCollectionSchema> mongoCollectionSchemaData = new CopyOnWriteArraySet<>();
