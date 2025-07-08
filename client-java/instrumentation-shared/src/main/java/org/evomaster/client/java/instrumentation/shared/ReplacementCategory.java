@@ -38,14 +38,11 @@ public enum ReplacementCategory {
     MONGO,
 
     /**
-<<<<<<< HEAD
      * Replacements to handle OPENSEARCH command interceptions
      */
     OPENSEARCH,
 
     /**
-=======
->>>>>>> 85cbee8ed5c394099df7ba839492c58f1db9568f
      * Replacements to handle REDIS command interceptions
      */
     REDIS
